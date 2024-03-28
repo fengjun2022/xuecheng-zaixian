@@ -10,28 +10,28 @@ spring:
     nacos:
       server-addr: 139.196.53.82:8081/nacostcp
       discovery: #服务注册相关配置
-        namespace: dev402
+        namespace: 5469c297-161c-4f8c-9693-c5ae1325a4a0
         group: xuecheng-plus-project
       config: #配置文件相关配置
-        namespace: dev402
+        namespace: 5469c297-161c-4f8c-9693-c5ae1325a4a0
         group: xuecheng-plus-project
         file-extension: yaml
         refresh-enabled: true
-        extension-configs:
-          - data-id: content-service-${spring.profiles.active}.yaml
-            group: xuecheng-plus-project
-            refresh: true
-        shared-configs:
-          - data-id: swagger-${spring.profiles.active}.yaml
-            group: xuecheng-plus-common
-            refresh: true
-          - data-id: logging-${spring.profiles.active}.yaml
-            group: xuecheng-plus-common
-            refresh: true
+#        extension-configs:
+#          - data-id: content-service-${spring.profiles.active}.yaml
+#            group: xuecheng-plus-project
+#            refresh: true
+#        shared-configs:
+#          - data-id: swagger-${spring.profiles.active}.yaml
+#            group: xuecheng-plus-common
+#            refresh: true
+#          - data-id: logging-${spring.profiles.active}.yaml
+#            group: xuecheng-plus-common
+#            refresh: true
 
 #  datasource:
 #    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://localhost:3306/xc402_content?serverTimezone=UTC&userUnicode=true&useSSL=false&
+#    url: jdbc:mysql://139.196.53.82:8081/mysql/xc402_content?serverTimezone=UTC&userUnicode=true&useSSL=false&allowPublicKeyRetrieval=true
 #    username: root
 #    password: abc123456
 

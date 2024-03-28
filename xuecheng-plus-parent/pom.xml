@@ -31,11 +31,15 @@
         <okhttp.version>4.8.1</okhttp.version>
         <swagger-spring-boot-starter.version>1.9.0.RELEASE</swagger-spring-boot-starter.version>
         <elasticsearch.version>7.12.1</elasticsearch.version>
+        <nacos.version>1.4.1</nacos.version>
     </properties>
 
 
     <dependencyManagement>
         <dependencies>
+
+
+
 
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -44,6 +48,8 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -64,17 +70,38 @@
                 <artifactId>lombok</artifactId>
                 <version>${org.projectlombok.version}</version>
             </dependency>
+
+
             <!-- mapstruct 代码生成器，简化java bean之间的映射 -->
-            <dependency>
-                <groupId>org.mapstruct</groupId>
-                <artifactId>mapstruct-jdk8</artifactId>
-                <version>${org.mapstruct.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mapstruct</groupId>
-                <artifactId>mapstruct-processor</artifactId>
-                <version>${org.mapstruct.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.mapstruct</groupId>-->
+<!--                <artifactId>mapstruct-jdk8</artifactId>-->
+<!--                <version>${org.mapstruct.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.mapstruct</groupId>-->
+<!--                <artifactId>mapstruct-processor</artifactId>-->
+<!--                <version>${org.mapstruct.version}</version>-->
+<!--            </dependency>-->
+<!--            &lt;!&ndash;分布式任务调度&ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.xuxueli</groupId>-->
+<!--                <artifactId>xxl-job-core</artifactId>-->
+<!--                <version>${xxl-job-core.version}</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>org.elasticsearch.client</groupId>-->
+<!--                <artifactId>elasticsearch-rest-high-level-client</artifactId>-->
+<!--                <version>${elasticsearch.version}</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>org.elasticsearch</groupId>-->
+<!--                <artifactId>elasticsearch</artifactId>-->
+<!--                <version>${elasticsearch.version}</version>-->
+<!--            </dependency>-->
+
             <dependency>
                 <groupId>io.swagger</groupId>
                 <artifactId>swagger-annotations</artifactId>
@@ -138,12 +165,7 @@
                 <artifactId>guava</artifactId>
                 <version>25.0-jre</version>
             </dependency>
-            <!--分布式任务调度-->
-            <dependency>
-                <groupId>com.xuxueli</groupId>
-                <artifactId>xxl-job-core</artifactId>
-                <version>${xxl-job-core.version}</version>
-            </dependency>
+
             <!--Spring boot单元测试-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -172,17 +194,7 @@
                 <artifactId>swagger-spring-boot-starter</artifactId>
                 <version>${swagger-spring-boot-starter.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.elasticsearch.client</groupId>
-                <artifactId>elasticsearch-rest-high-level-client</artifactId>
-                <version>${elasticsearch.version}</version>
-            </dependency>
 
-            <dependency>
-                <groupId>org.elasticsearch</groupId>
-                <artifactId>elasticsearch</artifactId>
-                <version>${elasticsearch.version}</version>
-            </dependency>
         </dependencies>
 
     </dependencyManagement>
