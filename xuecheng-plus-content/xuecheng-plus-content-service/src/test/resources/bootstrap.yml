@@ -5,7 +5,7 @@ spring:
     nacos:
       server-addr: 139.196.53.82:8081/nacostcp
       config: #配置文件相关配置
-        namespace: dev402
+        namespace: 5469c297-161c-4f8c-9693-c5ae1325a4a0
         group: xuecheng-plus-project
         file-extension: yaml
         refresh-enabled: true
