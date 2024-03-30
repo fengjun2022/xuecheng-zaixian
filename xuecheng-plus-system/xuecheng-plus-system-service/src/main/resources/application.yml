@@ -1,13 +1,33 @@
+#spring:
+#  application:
+#    name: system-service
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://139.196.53.82:8081/mysql/xc402_system?serverTimezone=UTC&userUnicode=true&useSSL=false&
+#    username: root
+#    password: abc123456
 spring:
   application:
     name: system-service
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://139.196.53.82:8081/mysql/xc402_system?serverTimezone=UTC&userUnicode=true&useSSL=false&
-    username: root
-    password: abc123456
-# 日志文件配置路径
-logging:
-  config: classpath:log4j2-dev.xml
+  cloud:
+    nacos:
+      server-addr: 139.196.53.82:8081/nacostcp
+      discovery: #服务注册相关配置
+        namespace: 5469c297-161c-4f8c-9693-c5ae1325a4a0
+        group: xuecheng-plus-system
+      config: #配置文件相关配置
+        namespace: 5469c297-161c-4f8c-9693-c5ae1325a4a0
+        group: xuecheng-plus-system
+        file-extension: yaml
+        refresh-enabled: true
+        shared-configs:
+          - data-id: swagger-${spring.profiles.active}.yaml
+            group: xuecheng-plus-common
+            refresh: true
+          - data-id: logging-${spring.profiles.active}.yaml
+            group: xuecheng-plus-common
+            refresh: true
 
+  profiles:
+    active: dev   #环境名
 
