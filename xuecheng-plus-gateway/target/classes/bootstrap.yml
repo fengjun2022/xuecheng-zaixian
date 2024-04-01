@@ -4,12 +4,12 @@ spring:
     name: gateway
   cloud:
     nacos:
-      server-addr: 192.168.101.65:8848
+      server-addr: 139.196.53.82:8081/nacostcp
       discovery:
-        namespace: dev402
+        namespace: 5469c297-161c-4f8c-9693-c5ae1325a4a0
         group: xuecheng-plus-project
       config:
-        namespace: dev402
+        namespace: 5469c297-161c-4f8c-9693-c5ae1325a4a0
         group: xuecheng-plus-project
         file-extension: yaml
         refresh-enabled: true

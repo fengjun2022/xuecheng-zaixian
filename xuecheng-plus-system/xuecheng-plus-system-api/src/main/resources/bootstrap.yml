@@ -12,19 +12,19 @@ spring:
       server-addr: 139.196.53.82:8081/nacostcp
       discovery: #服务注册相关配置
         namespace: 5469c297-161c-4f8c-9693-c5ae1325a4a0
-        group: xuecheng-plus-system
+        group: xuecheng-plus-project
       config: #配置文件相关配置
         namespace: 5469c297-161c-4f8c-9693-c5ae1325a4a0
-        group: xuecheng-plus-system
+        group: xuecheng-plus-project
         file-extension: yaml
         refresh-enabled: true
-        shared-configs:
-          - data-id: swagger-${spring.profiles.active}.yaml
-            group: xuecheng-plus-common
-            refresh: true
-          - data-id: logging-${spring.profiles.active}.yaml
-            group: xuecheng-plus-common
-            refresh: true
+#        shared-configs:
+#          - data-id: swagger-${spring.profiles.active}.yaml
+#            group: xuecheng-plus-common
+#            refresh: true
+#          - data-id: logging-${spring.profiles.active}.yaml
+#            group: xuecheng-plus-common
+#            refresh: true
 
   profiles:
     active: dev   #环境名

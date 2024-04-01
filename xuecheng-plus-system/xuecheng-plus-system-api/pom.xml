@@ -24,7 +24,6 @@
         </dependency>
 
 
-
         <dependency>
             <groupId>com.xuecheng</groupId>
             <artifactId>xuecheng-plus-system-model</artifactId>
